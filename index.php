@@ -71,9 +71,36 @@
 		<?php } ?>
 		
 		<link rel="shortcut icon" href="img/pint.ico">
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/pour.js" ></script>
 	</head> 
 
 	<body>
+		<script type="text/javascript">
+var beers = [];
+<?php for($i = 1; $i <= $numberOfTaps; $i++) {
+	if( isset($beers[$i]) ) {
+		$beer = $beers[$i];
+?>
+	var beer<?php echo $beer['id'] ?> = {
+		id: '<?php echo $beer['id'] ?>',
+		beername: '<?php echo $beer['beername'] ?>',
+		style: '<?php echo $beer['style'] ?>',
+		notes: '<?php echo $beer['notes'] ?>',
+		og: <?php echo $beer['og'] ?>,
+		fg: <?php echo $beer['fg'] ?>,
+		srm: <?php echo $beer['srm'] ?>,
+		ibu: <?php echo $beer['ibu'] ?>,
+		startAmount: <?php echo $beer['startAmount'] ?>,
+		amountPoured: <?php echo $beer['amountPoured'] ?>,
+		remainAmount: <?php echo $beer['remainAmount'] ?>,
+		tapNumber: <?php echo $beer['tapNumber'] ?>,
+		srmRgb: '<?php echo $beer['tapNumber'] ?>'
+	};
+	beers['<?php echo $beer['id'] ?>'] = beer<?php echo $beer['id']?>;
+<?php	}
+} ?>
+		</script>
 		<div class="bodywrapper">
 			<!-- Header with Brewery Logo and Project Name -->
 			<div class="header clearfix">
