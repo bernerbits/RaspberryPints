@@ -77,6 +77,7 @@
 
 	<body>
 		<script type="text/javascript">
+var curBeer = null;
 var beers = [];
 <?php for($i = 1; $i <= $numberOfTaps; $i++) {
 	if( isset($beers[$i]) ) {
@@ -95,7 +96,7 @@ var beers = [];
 		amountPoured: <?php echo $beer['amountPoured'] ?>,
 		remainAmount: <?php echo $beer['remainAmount'] ?>,
 		tapNumber: <?php echo $beer['tapNumber'] ?>,
-		srmRgb: '<?php echo $beer['tapNumber'] ?>'
+		srmRgb: '<?php echo $beer['srmRgb'] ?>'
 	};
 	beers['<?php echo $beer['id'] ?>'] = beer<?php echo $beer['id']?>;
 <?php	}

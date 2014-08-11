@@ -302,3 +302,94 @@ table .subhead{
 .keg-indicator .keg-green{
 	background-image: url(img/keg/green.png);
 }
+
+.pour {
+	background-image: url(img/background.jpg);
+	height: 385px;
+	width: 440px;
+	position: fixed;
+        top: 50%;
+        left: 50%;
+	margin-top:  -190px;
+	margin-left: -180px;
+}
+
+.pour .pour-title {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 440px;
+	height: 80px;
+	text-align: center;
+}
+
+.pour .pour-title h1 {
+	display:block;
+	position:relative;
+	top:0;
+	left:0;
+	width: 440px;
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
+}
+
+.pour .pour-title h2 {
+	display:block;
+	position:relative;
+	top:0;
+	left:0;
+	width:440px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.pour ul {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	list-style-type: none;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+.pour li {
+	position: relative;
+	width: 110px;
+	height: 140px;
+	line-height: 140px;
+	float: left;
+	display: table-cell;
+	text-align: center;
+	z-index: 12;
+}
+.pour li img {
+	vertical-align: middle;
+}
+.pour .glass-name {
+	display: block;
+	text-align: left;
+	height: 25px;
+	width: 440px;
+	line-height: 25px;
+	position: relative;
+	top: 0px;
+	color: #A0A0A0;
+	font-weight: normal;
+	font-size: 1em;
+	margin-left: 10px;
+	z-index: 11;
+}
+.pour .glass-size {
+	display: block;
+	text-align: right;
+	height: 25px;
+	width: 430px;
+	line-height: 25px;
+	position: relative;
+	top: 0px;
+	color: #A0A0A0;
+	font-weight: normal;
+	font-size: 1em;
+	z-index: 11;
+}
